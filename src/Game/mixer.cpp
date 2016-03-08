@@ -1,16 +1,15 @@
 #include "Game/Mixer.h"
 
-#include <cstdlib>
-#include <ctime>
+#include <algorithm>    // std::shuffle
+#include <random>       // std::default_random_engine
+#include <chrono>       // std::chrono::system_clock
 
 void Mixer::operator()(vector<std::size_t> &elementsOrder)
 {
-    std::srand(std::time(nullptr));
-    vector<size_t>::iterator begin = elementsOrder.begin();
-    std::size_t size = elementsOrder.size();
+    // obtain a time-based seed:
+      unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
 
-    for (std::size_t i = 0; i < elementsOrder.size()-1; ++i) {
-        std::iter_swap(begin+i, begin+(std::rand() % size));
-    }
+    std::shuffle (elementsOrder.begin(), elementsOrder.end(),
+                    std::default_random_engine(seed));
 }
 
