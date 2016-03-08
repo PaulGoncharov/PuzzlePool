@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/sounds">
+        <file>sounds/chimichangas.wav</file>
+        <file>sounds/duude!.wav</file>
+        <file>sounds/wrongButton.wav</file>
+        <file>sounds/letsDoThis.wav</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>images/Image1.jpg</file>
+        <file>images/Image2.jpg</file>
+        <file>images/Image3.jpg</file>
+        <file>images/image4.jpg</file>
+        <file>images/Image5.jpg</file>
+        <file>images/Image6.jpg</file>
+        <file>images/Image7.png</file>
+        <file>images/Image8.png</file>
+    </qresource>
+</RCC>
